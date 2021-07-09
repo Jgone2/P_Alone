@@ -1,22 +1,3 @@
-// 검색창
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', function () {
-    // Logic
-    searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function () {
-    searchEl.classList.add('focused');
-    searchInputEl.setAttribute('placeholder', '검색어를 입력해주세요.');
-});
-searchInputEl.addEventListener('blur', function () {
-    searchEl.classList.remove('focused');
-    searchInputEl.setAttribute('placeholder', '');
-});
-
-
 // AD & TO TOP
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.getElementById('to-top');
@@ -153,8 +134,3 @@ spyEls.forEach(function(spyEl) {
         .setClassToggle(spyEl, 'show') // setClassToggle(): HTML의 Class를 넣었다 뺐다함.
         .addTo(new ScrollMagic.Controller());
 });
-
-
-// footer Copyright 년도 계산
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear() // 2021
